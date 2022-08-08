@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FirstArrayTaskTest {
-
     @Test
     public void firstTest() {
         // да, да, массив можно задавать таким образом
@@ -13,7 +12,6 @@ public class FirstArrayTaskTest {
         int expected = 3;
         Assert.assertEquals(expected, result);
     }
-
     @Test
     public void secondTest() {
         int[] numbers = {1, 22, 31, 51, 83, 24};
@@ -21,7 +19,6 @@ public class FirstArrayTaskTest {
         int expected = 2;
         Assert.assertEquals(expected, result);
     }
-
     @Test
     public void thirdTest() {
         int[] numbers = {6};
@@ -29,7 +26,6 @@ public class FirstArrayTaskTest {
         int expected = 1;
         Assert.assertEquals(expected, result);
     }
-
     @Test
     public void fourthTest() {
         int[] numbers = {};
