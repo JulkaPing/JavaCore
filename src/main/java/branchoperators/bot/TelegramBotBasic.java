@@ -8,12 +8,9 @@ import java.util.Scanner;
 /**
  * Базовые элементы бота
  */
-
 public class TelegramBotBasic {
     public static void main(String[] args) throws IOException {
-
         var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
         while (true) {
             System.out.println("Vvedite chislo:");
             int number = 0;

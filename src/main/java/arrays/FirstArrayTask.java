@@ -7,7 +7,6 @@ public class FirstArrayTask {
      * @param array массив чисел
      * @return количество четных чисел в массиве
      */
-
     public static int getCountEvenNumbers(int[] array) {
         int amountResult = 0;
         for (int value: array) {

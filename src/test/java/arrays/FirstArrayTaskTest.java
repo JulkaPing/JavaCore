@@ -6,8 +6,7 @@ import org.junit.Test;
 public class FirstArrayTaskTest {
     @Test
     public void firstTest() {
-        // да, да, массив можно задавать таким образом
-        int[] numbers = {1, 2, 3, 4, 5, 6};
+         int[] numbers = {1, 2, 3, 4, 5, 6};
         int result = FirstArrayTask.getCountEvenNumbers(numbers);
         int expected = 3;
         Assert.assertEquals(expected, result);

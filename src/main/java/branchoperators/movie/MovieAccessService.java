@@ -4,7 +4,6 @@ package branchoperators.movie;
  * Сервис доступа в кинотеатр.
  */
 public class MovieAccessService {
-
     /**
      * Данный метод вовзращает строку уведомляющую о правах доступа в кинотеатр.
      * @param age возраст посетителя
