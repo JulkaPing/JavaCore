@@ -9,7 +9,6 @@ import java.util.Scanner;
  * Базовые элементы бота
  */
 
-
 public class TelegramBotBasic {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
