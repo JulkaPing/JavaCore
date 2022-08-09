@@ -15,6 +15,7 @@ public class TelegramBotBasic {
         //int x = scanner.nextInt();
         // Данный код мы вообще никак не трогаем. Просто смотрим и любуемся им.
         var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
         while (true) {
             System.out.println("Vvedite chislo:");
             int number = 0;
