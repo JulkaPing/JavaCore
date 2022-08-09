@@ -3,7 +3,6 @@ package classes.auto;
 import java.util.Arrays;
 
 public class Main {
-
     public static void main(String[] args) {
         Auto mercedec = new Auto("mercedec", "mercedec-E", 2, "AT" );
         Auto BMW4 = new Auto("BMW", "BMW X4", 4, "MKP" );
