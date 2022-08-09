@@ -11,10 +11,7 @@ import java.util.Scanner;
 
 public class TelegramBotBasic {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
 
-        //int x = scanner.nextInt();
-        // Данный код мы вообще никак не трогаем. Просто смотрим и любуемся им.
         var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
@@ -35,9 +32,9 @@ public class TelegramBotBasic {
                 System.out.println(" What???");
             } else {
                 System.out.println("I don't understand you, I'm turnung off");
+                bufferedReader.close();
+                break;
             }
-            bufferedReader.close();
-            break;
         }
     }
 }
