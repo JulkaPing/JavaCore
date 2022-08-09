@@ -27,7 +27,6 @@ public class TelegramBotBasic {
                 bufferedReader.close();
                 break;
             }
-
             if (number == 1) {
                 System.out.println("Hello");
             } else if (number == 2) {
