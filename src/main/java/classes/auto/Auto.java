@@ -1,34 +1,23 @@
 package classes.auto;
 
 public class Auto {
-    private String modelAuto;
     private String markaAuto;
+    private String modelAuto;
     private int amountOfCarSeats;       //Количество пассажирских мест
     private String typeTransmission;    //Тип коробки передач
 
+    private Auto[] autos;
 
-    public Auto(String modelAuto, String markaAuto, int amountOfCarSeats, String typeTransmission) {
-        if ((modelAuto.length() == 0) || (markaAuto.length() == 0) || (amountOfCarSeats < 2)){
+    public Auto(String markaAuto, String modelAuto, int amountOfCarSeats, String typeTransmission) {
+        if ((markaAuto.length() == 0) || (modelAuto.length() == 0) ||
+                (amountOfCarSeats < 2) || (typeTransmission.length() == 0)){
             System.out.println("Vvedite vce parametri");
             throw new RuntimeException();
         }
-        this.modelAuto = modelAuto;
         this.markaAuto = markaAuto;
+        this.modelAuto = modelAuto;
         this.amountOfCarSeats = amountOfCarSeats;
         this.typeTransmission = typeTransmission;
-
-    }
-
-    public String getModelAuto() {
-        return modelAuto;
-    }
-
-    public void setModelAuto(String modelAuto) {
-        /*if (modelAuto.length() == 0) {
-            System.out.println("Vvedite model avto");
-            throw new RuntimeException();
-        }*/
-        this.modelAuto = modelAuto;
     }
 
     public String getMarkaAuto() {
@@ -36,11 +25,14 @@ public class Auto {
     }
 
     public void setMarkaAuto(String markaAuto) {
-        /*if (markaAuto.length() == 0) {
-            System.out.println("Vvedite marky avto");
-            throw new RuntimeException();
-        }*/
         this.markaAuto = markaAuto;
+    }
+    public String getModelAuto() {
+        return modelAuto;
+    }
+
+    public void setModelAuto(String modelAuto) {
+        this.modelAuto = modelAuto;
     }
 
     public int getAmountOfCarSeats() {
@@ -48,10 +40,6 @@ public class Auto {
     }
 
     public void setAmountOfCarSeats(int amountOfCarSeats) {
-        /*if (amountOfCarSeats < 2) {
-            System.out.println("Incorrect amount of cars seats");
-            throw new RuntimeException();
-        }*/
         this.amountOfCarSeats = amountOfCarSeats;
     }
 
@@ -66,8 +54,8 @@ public class Auto {
     @Override
     public String toString() {
         return "Auto{" +
-                "modelAuto='" + modelAuto + '\'' +
-                ", markaAuto='" + markaAuto + '\'' +
+                "markaAuto='" + markaAuto + '\'' +
+                ", modelAuto='" + modelAuto + '\'' +
                 ", amountOfCarSeats=" + amountOfCarSeats +
                 ", typeTransmission='" + typeTransmission + '\'' +
                 '}';

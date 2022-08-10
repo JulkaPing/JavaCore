@@ -3,17 +3,24 @@ package classes.auto;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        Auto mercedec = new Auto("mercedec", "mercedec-E", 2, "AT" );
-        Auto BMW4 = new Auto("BMW", "BMW X4", 4, "MKP" );
-        Auto BMW6 = new Auto("BMW", "BMW X6", 5, "AT");
 
-        Auto[] cars = new Auto[3];
-        cars[0] = mercedec;
-        cars[1] = BMW4;
-        cars[2] = BMW6;
-        for (Auto value : cars) {
-            System.out.println(value);
-        }
+    @Override
+    public String toString() {
+        return "Main{}";
+    }
+
+    public static void main(String[] args) {
+        Auto car1 = new Auto("mercedec", "mercedec-E", 2, "AT" );
+        Auto car2 = new Auto("mercedec", "mercedec-A",4, "AT");
+        Auto car3 = new Auto("BMW", "BMW X4", 2, "MKP" );
+        Auto car4 = new Auto("BMW", "BMW X6", 4, "AT");
+        Auto[] autos = {car1, car2, car3, car4};
+
+
+
+
+
+
+
     }
 }
