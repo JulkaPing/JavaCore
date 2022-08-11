@@ -1,11 +1,10 @@
 package classes.zoo;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ZooparkTest {
+public class ZooServiceTest {
     @Test
     public void testNameZoopark() {
         Animal animal1 = new Animal("Elephant", "Sophia", 'w', 15);
@@ -26,6 +25,5 @@ public class ZooparkTest {
                 8,
                 new Animal[]{animal5, animal6});
     }
-
 
 }
