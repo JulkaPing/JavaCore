@@ -47,6 +47,21 @@ public class AutoServiceTest {
         Assert.assertEquals(expected, result);
     }
 
+    @Test
+    public void arrayCarMercedecE() {
+        AutoService autoService = new AutoService();
+        Auto car1 = new Auto("mercedec", "mercedec-E", 2, "AT" );
+        Auto car2 = new Auto("mercedec", "mercedec-A",4, "AT");
+        Auto car3 = new Auto("BMW", "BMW X6", 4, "AT");
+        Auto car4 = new Auto("mercedec", "mercedec-E", 2, "MKP" );
+        Auto[] autos = {car1, car2, car3, car4};
+        Auto[]  carMercedecE= autoService.getOnlyMercedecECars(autos);
+
+        int result = autoService.getOnlyMercedecECars(autos).length;
+        int expected = 2;
+        Assert.assertEquals(expected, result);
+    }
+
 
 
 

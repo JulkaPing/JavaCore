@@ -12,7 +12,6 @@ public class AutoService {
      */
     public Auto[] getOnlyBmwCars(Auto[] autos) {
         int countResult = 0;
-
         for (int i = 0; i < autos.length; i++) {
             if (autos[i].getMarkaAuto().equals("BMW")) {
                 countResult++;
@@ -76,4 +75,20 @@ public class AutoService {
      * @ retutn автомобили мерседес Е - класса
      */
 
+    public Auto[] getOnlyMercedecECars(Auto[] autos) {
+        int countResult = 0;
+        for (int i = 0; i < autos.length; i++) {
+            if (autos[i].getModelAuto().equals("mercedec-E")) {
+                countResult++;
+            }
+        }
+
+        Auto[] MercedecECars = new Auto[countResult];
+        for (int i = 0, j = 0; i < autos.length; i++) {
+            if (autos[i].getModelAuto().equals("mercedec-E")) {
+                MercedecECars[j++] = autos[i];
+            }
+        }
+        return MercedecECars;
+    }
 }
