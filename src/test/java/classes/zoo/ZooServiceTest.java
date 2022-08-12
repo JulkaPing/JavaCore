@@ -28,12 +28,12 @@ public class ZooServiceTest {
     @Test
     public void getAveragePriceZoos() {
 
-    ZooService zooService = new ZooService();
+        ZooService zooService = new ZooService();
 
-    double result = zooService.getAveragePriceZoos(zooparks);
-    double expected = 548.33;
-    Assert.assertEquals(expected, result, 0.01);
-}
+        double result = zooService.getAveragePriceZoos(zooparks);
+        double expected = 548.33;
+        Assert.assertEquals(expected, result, 0.01);
+    }
 
     @Test
     public void getZooBiggestAnimals() {
