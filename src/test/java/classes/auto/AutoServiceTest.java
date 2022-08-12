@@ -31,7 +31,6 @@ public class AutoServiceTest {
 
     @Test
     public void getOnlyBmwCars2() {
-
         AutoService autoService = new AutoService();
         Auto[] bmwCarsResult = autoService.getOnlyBmwCars(autos, "BMW");
 
@@ -48,10 +47,9 @@ public class AutoServiceTest {
         Assert.assertEquals(transmissionExpected, autoResult.getTypeTransmission());
     }
 
-   /* @Test
-    public void arrayAutoSportCars() {
+    @Test
+    public void arrayAutoSportCars1() {
         AutoService autoService = new AutoService();
-
         Auto[] sportcars = autoService.getSportCars(autos);
 
         int result = autoService.getSportCars(autos).length;
@@ -59,7 +57,24 @@ public class AutoServiceTest {
         Assert.assertEquals(expected, result);
     }
 
-    @Test
+   /* @Test
+    public void arrayAutoSportCars2() {
+        AutoService autoService = new AutoService();
+        Auto[] bmwCarsResult = autoService.getOnlyBmwCars(autos, "BMW");
+
+        Auto autoResult = bmwCarsResult[0];
+
+        String markaExpected = autoResult.getMarkaAuto();
+        String modelExpected = autoResult.getModelAuto();
+        int seatsCountExpected = autoResult.getAmountOfCarSeats();
+        String transmissionExpected = autoResult.getTypeTransmission();
+        //Assert.assertEquals(bmwCarsResult, autoResult);
+        Assert.assertEquals(markaExpected, autoResult.getMarkaAuto());
+        Assert.assertEquals(modelExpected, autoResult.getModelAuto());
+        Assert.assertEquals(seatsCountExpected, autoResult.getAmountOfCarSeats());
+        Assert.assertEquals(transmissionExpected, autoResult.getTypeTransmission());
+    }
+    /*@Test
     public void arrayCarTransmissionAT() {
         AutoService autoService = new AutoService();
 
