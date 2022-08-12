@@ -5,23 +5,23 @@ import java.util.Arrays;
 /**
  * Зоопарк
  */
-
 public class Zoopark {
-    private String name;
+    private String title;
     private double priceTicket;
     private Animal[] animals;
 
-    public Zoopark(String name, double priceTicket, Animal[] animals) {
-        this.name = name;
+
+    public Zoopark(String title, double priceTicket, Animal[] animals) {
+        this.title = title;
         this.priceTicket = priceTicket;
         this.animals = animals;
     }
     public String getName() {
-        return name;
+        return title;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.title = name;
     }
 
     public double getPriceTicket() {
@@ -43,7 +43,7 @@ public class Zoopark {
     @Override
     public String toString() {
         return "Zoopark{" +
-                "name='" + name + '\'' +
+                "title='" + title + '\'' +
                 ", priceTicket=" + priceTicket +
                 ", animals=" + Arrays.toString(animals) +
                 '}';

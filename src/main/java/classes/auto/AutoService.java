@@ -10,18 +10,18 @@ public class AutoService {
      * @param autos все автомобили
      * @return массив автомобилей БМВ
      */
-    public Auto[] getOnlyBmwCars(Auto[] autos) {
+    public Auto[] getOnlyBmwCars(Auto[] autos, String marka) {
         int countResult = 0;
-        for (int i = 0; i < autos.length; i++) {
-            if (autos[i].getMarkaAuto().equals("BMW")) {
+        for (Auto auto : autos) {
+            if (auto.getMarkaAuto().equals(marka)) {
                 countResult++;
             }
         }
-
         Auto[] bmwCars = new Auto[countResult];
-        for (int i = 0, j = 0; i < autos.length; i++) {
-            if (autos[i].getMarkaAuto().equals("BMW")) {
-                bmwCars[j++] = autos[i];
+        for (Auto auto : autos) {
+            if (auto.getMarkaAuto().equals(marka)) {
+                countResult --;
+                bmwCars[countResult] = auto;
             }
         }
         return bmwCars;
@@ -35,15 +35,16 @@ public class AutoService {
      */
     public Auto[] getSportCars(Auto[] autos) {
         int countResult = 0;
-        for (int i = 0; i < autos.length; i++) {
-            if (autos[i].getAmountOfCarSeats() == 2) {
+        for (Auto auto : autos) {
+            if (auto.getAmountOfCarSeats() == 2) {
                 countResult++;
             }
         }
         Auto[] sportCars = new Auto[countResult];
-        for (int i = 0, j = 0; i < autos.length; i++) {
-            if (autos[i].getAmountOfCarSeats() == 2) {
-                sportCars[j++] = autos[i];
+        for (Auto auto : autos) {
+            if (auto.getAmountOfCarSeats() == 2) {
+                countResult --;
+                sportCars[countResult] = auto;
             }
         }
         return sportCars;
@@ -53,17 +54,18 @@ public class AutoService {
      * @param autos все автомобили
      * @return автомобили с автоматической коробкой передач
      */
-    public Auto[] getOnlyAutomaticTypeCars(Auto[] autos) {
+    public Auto[] getOnlyAutomaticTypeCars(Auto[] autos, String typeTransmission) {
         int countResult = 0;
-        for (int i = 0; i < autos.length; i++) {
-            if (autos[i].getTypeTransmission().equals("AT")) {
+        for (Auto auto : autos) {
+            if (auto.getTypeTransmission().equals(typeTransmission)) {
                 countResult++;
             }
         }
         Auto[] carTransmissionAT = new Auto[countResult];
-        for (int i = 0, j = 0; i < autos.length; i++) {
-            if (autos[i].getTypeTransmission().equals("AT")) {
-                carTransmissionAT[j++] = autos[i];
+        for (Auto auto : autos) {
+            if (auto.getTypeTransmission().equals(typeTransmission)) {
+                countResult --;
+                carTransmissionAT[countResult] = auto;
             }
         }
         return carTransmissionAT;
@@ -77,16 +79,16 @@ public class AutoService {
 
     public Auto[] getOnlyMercedecECars(Auto[] autos) {
         int countResult = 0;
-        for (int i = 0; i < autos.length; i++) {
-            if (autos[i].getModelAuto().equals("mercedec-E")) {
+        for (Auto auto : autos) {
+            if (auto.getModelAuto().equals("mercedec-E")) {
                 countResult++;
             }
         }
-
         Auto[] MercedecECars = new Auto[countResult];
-        for (int i = 0, j = 0; i < autos.length; i++) {
-            if (autos[i].getModelAuto().equals("mercedec-E")) {
-                MercedecECars[j++] = autos[i];
+        for (Auto auto : autos) {
+            if (auto.getMarkaAuto().equals("mercedec") && auto.getModelAuto().contains("E")) {
+                countResult --;
+                MercedecECars[countResult] = auto;
             }
         }
         return MercedecECars;

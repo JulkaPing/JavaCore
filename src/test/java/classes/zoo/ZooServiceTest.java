@@ -1,29 +1,53 @@
 package classes.zoo;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class ZooServiceTest {
+
+    //Массив зоопарков
+    private Zoopark[] zooparks = {
+            new Zoopark("wildAnimalZoo", 525, new Animal[]{
+                                                            new Animal("Elephant", 50),
+                                                            new Animal("Bear", 5),
+                                                            new Animal("Tiger", 8),
+                                                            new Animal("Monkey", 4)
+                                                            }
+            ),
+            new Zoopark("amphibianZoo", 800,  new Animal[]{
+                                                            new Animal("Crocodile", 43),
+                                                            new Animal("snake", 12)
+                                                            }
+            ),
+            new Zoopark("otherAnimalZoo", 320, new Animal[]{
+                                                            new Animal("Bird", 3),
+                                                            new Animal("Fish", 1),
+                                                            }
+            )
+    };
+
     @Test
-    public void testNameZoopark() {
-        Animal animal1 = new Animal("Elephant", "Sophia", 'w', 15);
-        Animal animal2 = new Animal("Bear", "Misha", 'm', 6);
-        Animal animal3 = new Animal("Tiger", "Gosha", 'm', 5);
-        Animal animal4 = new Animal("Tiger", "Masha", 'w', 4);
-        Animal animal5 = new Animal("Crocodile", "Grisha", 'm', 50);
-        Animal animal6 = new Animal("Crocodile", "Nina", 'w', 40);
-        Animal animal7 = new Animal("Monkey", "Nyusya", 'w', 3);
+    public void getAveragePriceZoos() {
 
-        Zoopark wildAnimalZoo = new Zoopark(
-                "wildAnimalZoo",
-                5,
-                new Animal[]{animal1, animal2, animal3, animal4, animal7});
+    ZooService zooService = new ZooService();
 
-        Zoopark amphibianZoo = new Zoopark(
-                "amphibianZoo",
-                8,
-                new Animal[]{animal5, animal6});
+    double result = zooService.getAveragePriceZoos(zooparks);
+    double expected = 548.33;
+    Assert.assertEquals(expected, result, 0.01);
+}
+
+
+    @Test
+    public void getZooBiggestAnimals() {
+
+        ZooService zooService = new ZooService();
+
+        ZooResult resultName = zooService.getZooBiggestAnimals(zooparks);
+        String expectedName = "wildAnimalZoo";
+        int expectedAnimalsSize = 4;
+
+        Assert.assertEquals(expectedName, resultName.getName());
+        Assert.assertEquals(expectedAnimalsSize, resultName.getSizeAnimals());
     }
 
 }

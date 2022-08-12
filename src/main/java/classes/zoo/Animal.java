@@ -3,14 +3,11 @@ package classes.zoo;
 public class Animal {
     private String title;
     private String name;
-    private char sex;
     private int age;
     private  Animal[] animals;
 
-    public Animal(String title, String name, char sex, int age) {
+    public Animal(String title, int age) {
         this.title = title;
-        this.name = name;
-        this.sex = sex;
         this.age = age;
     }
 
@@ -22,23 +19,7 @@ public class Animal {
         this.title = title;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public int getAge() {
+        public int getAge() {
         return age;
     }
 
@@ -50,8 +31,6 @@ public class Animal {
     public String toString() {
         return "Animal{" +
                 "title='" + title + '\'' +
-                ", name='" + name + '\'' +
-                ", sex=" + sex +
                 ", age=" + age +
                 '}';
     }

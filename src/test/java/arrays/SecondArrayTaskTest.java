@@ -25,5 +25,4 @@ public class SecondArrayTaskTest {
         int expected = 0;
         Assert.assertEquals(expected, result);
     }
-
 }

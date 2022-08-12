@@ -1,8 +1,8 @@
 package string;
 
 public class BigString {
-    private int length;
-    private String value;
+    private int length = 0;
+    private String value = "";
 
     public BigString(int length, String value) {
         this.length = length;
