@@ -10,7 +10,6 @@ public class Zoopark {
     private double priceTicket;
     private Animal[] animals;
 
-
     public Zoopark(String title, double priceTicket, Animal[] animals) {
         this.title = title;
         this.priceTicket = priceTicket;
