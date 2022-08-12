@@ -36,7 +36,6 @@ public class ZooServiceTest {
     Assert.assertEquals(expected, result, 0.01);
 }
 
-
     @Test
     public void getZooBiggestAnimals() {
 
@@ -49,5 +48,4 @@ public class ZooServiceTest {
         Assert.assertEquals(expectedName, resultName.getName());
         Assert.assertEquals(expectedAnimalsSize, resultName.getSizeAnimals());
     }
-
 }

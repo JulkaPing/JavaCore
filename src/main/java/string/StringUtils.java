@@ -9,6 +9,7 @@ public class StringUtils {
      * @return самая большая строка в верхнем регистреxn
      */
     public static BigString getTheBiggestStringFromArray(String[] strings) {
+
         if(strings == null || strings.length == 0) {
             return null;
         }

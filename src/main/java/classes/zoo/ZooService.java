@@ -1,7 +1,5 @@
 package classes.zoo;
 
-import javax.xml.namespace.QName;
-
 public class ZooService {
 
     /**

@@ -1,29 +1,25 @@
 package classes.auto;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class AutoServiceTest {
 
     // массив автомобилей
     private Auto[] autos = {
             new Auto("BMW", "BMW X4", 4, "MKP" ),
-            new Auto("mercedec", "mercedec-E", 2, "AT" ),
-            new Auto("mercedec", "mercedec-A",4, "AT"),
+            new Auto("mercedec", "E 325", 2, "AT" ),
+            new Auto("mercedec", "A 32",4, "AT"),
             new Auto("KIA", "X-line", 4, "AT"),
-            new Auto("mercedec", "mercedec-G", 2, "MKP" )
+            new Auto("mercedec", "E 330", 2, "MKP" )
     };
 
     @Test
     public void getOnlyBmwCars1() {
         AutoService autoService = new AutoService();
 
-        Auto[] bmwCarsResult = autoService.getOnlyBmwCars(autos, "BMW");
         int result = autoService.getOnlyBmwCars(autos, "BMW").length;
         int expected = 1;
         Assert.assertEquals(expected, result);
@@ -40,7 +36,7 @@ public class AutoServiceTest {
         String modelExpected = autoResult.getModelAuto();
         int seatsCountExpected = autoResult.getAmountOfCarSeats();
         String transmissionExpected = autoResult.getTypeTransmission();
-        //Assert.assertEquals(bmwCarsResult, autoResult);
+
         Assert.assertEquals(markaExpected, autoResult.getMarkaAuto());
         Assert.assertEquals(modelExpected, autoResult.getModelAuto());
         Assert.assertEquals(seatsCountExpected, autoResult.getAmountOfCarSeats());
@@ -50,35 +46,23 @@ public class AutoServiceTest {
     @Test
     public void arrayAutoSportCars1() {
         AutoService autoService = new AutoService();
-        Auto[] sportcars = autoService.getSportCars(autos);
 
         int result = autoService.getSportCars(autos).length;
         int expected = 2;
         Assert.assertEquals(expected, result);
     }
 
-   /* @Test
+    @Test
     public void arrayAutoSportCars2() {
         AutoService autoService = new AutoService();
-        Auto[] bmwCarsResult = autoService.getOnlyBmwCars(autos, "BMW");
+        Auto[] bmwCarsResult = autoService.getSportCars(autos);
 
-        Auto autoResult = bmwCarsResult[0];
-
-        String markaExpected = autoResult.getMarkaAuto();
-        String modelExpected = autoResult.getModelAuto();
-        int seatsCountExpected = autoResult.getAmountOfCarSeats();
-        String transmissionExpected = autoResult.getTypeTransmission();
-        //Assert.assertEquals(bmwCarsResult, autoResult);
-        Assert.assertEquals(markaExpected, autoResult.getMarkaAuto());
-        Assert.assertEquals(modelExpected, autoResult.getModelAuto());
-        Assert.assertEquals(seatsCountExpected, autoResult.getAmountOfCarSeats());
-        Assert.assertEquals(transmissionExpected, autoResult.getTypeTransmission());
+        Arrays.stream(bmwCarsResult)
+                .forEach(System.out::println);
     }
-    /*@Test
-    public void arrayCarTransmissionAT() {
+    @Test
+    public void getOnlyAutomaticTypeCars1() {
         AutoService autoService = new AutoService();
-
-        Auto[]  carTransmissionAT = autoService.getOnlyAutomaticTypeCars(autos, "AT");
 
         int result = autoService.getOnlyAutomaticTypeCars(autos, "AT").length;
         int expected = 3;
@@ -86,17 +70,20 @@ public class AutoServiceTest {
     }
 
     @Test
+    public void getOnlyAutomaticTypeCars2() {
+        AutoService autoService = new AutoService();
+        Auto[] bmwCarsResult = autoService.getOnlyAutomaticTypeCars(autos, "AT");
+
+        Arrays.stream(bmwCarsResult)
+                .forEach(System.out::println);
+    }
+
+    @Test
     public void arrayCarMercedecE() {
         AutoService autoService = new AutoService();
+        Auto[]  carMercedecE = autoService.getOnlyMercedecECars(autos, "mercedec");
 
-        Auto[]  carMercedecE= autoService.getOnlyMercedecECars(autos);
-
-        int result = autoService.getOnlyMercedecECars(autos).length;
-        int expected = 2;
-        Assert.assertEquals(expected, result);
-    }*/
-
-
-
-
+        Arrays.stream(carMercedecE)
+                .forEach(System.out::println);
+    }
 }

@@ -77,16 +77,16 @@ public class AutoService {
      * @ retutn автомобили мерседес Е - класса
      */
 
-    public Auto[] getOnlyMercedecECars(Auto[] autos) {
+    public Auto[] getOnlyMercedecECars(Auto[] autos, String markaAuto) {
         int countResult = 0;
         for (Auto auto : autos) {
-            if (auto.getModelAuto().equals("mercedec-E")) {
+            if (auto.getMarkaAuto().equals(markaAuto) && auto.getModelAuto().contains("E")) {
                 countResult++;
             }
         }
         Auto[] MercedecECars = new Auto[countResult];
         for (Auto auto : autos) {
-            if (auto.getMarkaAuto().equals("mercedec") && auto.getModelAuto().contains("E")) {
+            if (auto.getMarkaAuto().equals(markaAuto) && auto.getModelAuto().contains("E")) {
                 countResult --;
                 MercedecECars[countResult] = auto;
             }

@@ -3,8 +3,6 @@ package string;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class StringUtilsTest {
     @Test
     public void getTheBiggestStringFromArray() {
@@ -13,6 +11,7 @@ public class StringUtilsTest {
                 "Утро, День, Вечер, Ночь",  //23
                 "Завтрак, Обед, Ужин"       //19
         };
+
         BigString bigString = StringUtils.getTheBiggestStringFromArray(strings);
         Assert.assertEquals(24, bigString.getLength());
         Assert.assertEquals("Зима, Весна, Лето, Осень", bigString.getValue());
