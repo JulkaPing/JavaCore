@@ -3,8 +3,8 @@ package classes.auto;
 public class Auto {
     private String markaAuto;
     private String modelAuto;
-    private int amountOfCarSeats;       //Количество пассажирских мест
-    private String typeTransmission;    //Тип коробки передач
+    private int amountOfCarSeats;
+    private String typeTransmission;
 
     private Auto[] autos;
 

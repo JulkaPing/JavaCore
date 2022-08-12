@@ -5,7 +5,6 @@ import org.junit.Test;
 
 public class ZooServiceTest {
 
-    //Массив зоопарков
     private Zoopark[] zooparks = {
             new Zoopark("wildAnimalZoo", 525, new Animal[]{
                                                             new Animal("Elephant", 50),

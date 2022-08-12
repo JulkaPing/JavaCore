@@ -7,7 +7,6 @@ import java.util.Arrays;
 
 public class AutoServiceTest {
 
-    // массив автомобилей
     private Auto[] autos = {
             new Auto("BMW", "BMW X4", 4, "MKP" ),
             new Auto("mercedec", "E 325", 2, "AT" ),

@@ -2,9 +2,7 @@ package classes.zoo;
 
 public class Animal {
     private String title;
-    private String name;
     private int age;
-    private  Animal[] animals;
 
     public Animal(String title, int age) {
         this.title = title;
