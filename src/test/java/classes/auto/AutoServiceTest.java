@@ -37,18 +37,15 @@ public class AutoServiceTest {
 
         Auto autoResult = bmwCarsResult[0];
 
-        System.out.println(autoResult.getMarkaAuto());
-        System.out.println((autoResult.getModelAuto()));
-        Assert.assertEquals(bmwCarsResult, autoResult);
-
-        //String markaExpected = autos.getMarkaAuto();
-        //String modelExpected = car1.getModelAuto();
-        //int seatsCountExpected = car1.getAmountOfCarSeats();
-        //String transmissionExpected = car1.getTypeTransmission();
-        //Assert.assertEquals(markaExpected, autoResult.getMarkaAuto());
-        //Assert.assertEquals(modelExpected, autoResult.getModelAuto());
-        //Assert.assertEquals(seatsCountExpected, autoResult.getAmountOfCarSeats());
-        //Assert.assertEquals(transmissionExpected, autoResult.getTypeTransmission());
+        String markaExpected = autoResult.getMarkaAuto();
+        String modelExpected = autoResult.getModelAuto();
+        int seatsCountExpected = autoResult.getAmountOfCarSeats();
+        String transmissionExpected = autoResult.getTypeTransmission();
+        //Assert.assertEquals(bmwCarsResult, autoResult);
+        Assert.assertEquals(markaExpected, autoResult.getMarkaAuto());
+        Assert.assertEquals(modelExpected, autoResult.getModelAuto());
+        Assert.assertEquals(seatsCountExpected, autoResult.getAmountOfCarSeats());
+        Assert.assertEquals(transmissionExpected, autoResult.getTypeTransmission());
     }
 
    /* @Test
