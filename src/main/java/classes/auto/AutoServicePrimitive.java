@@ -1,9 +1,11 @@
 package classes.auto;
 
+import java.util.List;
+
 /**
  *Сервис по работе с автомобилями
  */
-public class AutoService {
+public class AutoServicePrimitive {
 
     /**
      * Данный метод возвращает автомобили марки BMW
@@ -27,6 +29,7 @@ public class AutoService {
         return bmwCars;
     }
 
+
     /**
      * Принято считать что если автомобиль двух-местный, то он из спорт-класса
      * Данный метод возвращает автомобили спорт-класса
@@ -49,6 +52,7 @@ public class AutoService {
         }
         return sportCars;
     }
+
     /**
      * Данный метод возвращает автомобили только с автоматической коробкой передач
      * @param autos все автомобили
@@ -76,7 +80,6 @@ public class AutoService {
      * @param autos все автомобили
      * @ retutn автомобили мерседес Е - класса
      */
-
     public Auto[] getOnlyMercedecECars(Auto[] autos, String markaAuto) {
         int countResult = 0;
         for (Auto auto : autos) {
@@ -93,6 +96,4 @@ public class AutoService {
         }
         return MercedecECars;
     }
-
-
 }
